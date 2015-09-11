@@ -1,12 +1,12 @@
 <Manifest>
-    <ScripterInstanceName>MoveToBCCHot</ScripterInstanceName>
+    <ScripterInstanceName>Easy UNIX cp</ScripterInstanceName>
     <ScriptPackageFormatVersion>1.0</ScriptPackageFormatVersion>
     <ScripterPassword></ScripterPassword>
     <ScriptDeclarationFile>MoveToBCCHot.xml</ScriptDeclarationFile>
     <ScriptProgramFiles>
         <ScriptProgramFile ScriptLanguage="JavaScript">MoveToBCCHot.js</ScriptProgramFile>
     </ScriptProgramFiles>
-    <ScriptIconFile></ScriptIconFile>
+    <ScriptIconFile>copy_icon.png</ScriptIconFile>
     <AppleBinary></AppleBinary>
     <LocalizationItems/>
 </Manifest>
