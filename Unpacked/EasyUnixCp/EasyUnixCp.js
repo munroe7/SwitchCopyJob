@@ -68,5 +68,5 @@ function jobArrived( s : Switch, job : Job )
 	if( debug == 'Yes' ){
 		s.log( 2, 'cpResponse: ' + cpResponse );
 	}
-		
+			
 }
