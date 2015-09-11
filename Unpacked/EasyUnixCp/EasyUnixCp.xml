@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Object>
     <ElementFields>
-        <Name Type="string" Editor="hide">MoveToBCCHot</Name>
+        <Name Type="string" Editor="hide">Easy UNIX cp</Name>
         <DisplayName Type="string" Editor="hide"/>
         <Version Type="number" Editor="hide">1</Version>
         <Keywords Type="string" Editor="hide"/>
         <Tooltip Type="string" Editor="hide"/>
         <IncomingConnections RequireAtLeastOne="Yes" Editor="hide">Yes</IncomingConnections>
-        <OutgoingConnections RequireAtLeastOne="Yes" DetailedInfo="" Editor="hide">Unlimited</OutgoingConnections>
+        <OutgoingConnections DetailedInfo="" Editor="hide">No</OutgoingConnections>
         <ConnectionType Editor="hide">Move</ConnectionType>
         <ScriptFunctions Editor="hide">jobArrived</ScriptFunctions>
         <ExecutionMode Editor="hide">Serialized</ExecutionMode>
