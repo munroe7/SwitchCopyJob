@@ -56,17 +56,21 @@ function jobArrived( s : Switch, job : Job )
 	// Execute command
 	Process.execute( moveFileCommand );
 	
-	// Check for errors
+	// Gather output
 	var cpError = Process.stderr;
 	var cpResponse = Process.stdout;
-	
-	if( cpError ){
-		s.log( 3, 'cpError: ' + cpError );
-	}
 	
 	// Debug some more
 	if( debug == 'Yes' ){
 		s.log( 2, 'cpResponse: ' + cpResponse );
+	}
+	
+	// Error checking and completion
+	if( cpError ){
+		s.log( 3, 'cpError: ' + cpError );
+	} else {
+		// Delete the existing job
+		job.sendToNull( job.getPath() );
 	}
 			
 }
