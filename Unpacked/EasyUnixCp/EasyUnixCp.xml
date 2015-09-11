@@ -7,7 +7,7 @@
         <Keywords Type="string" Editor="hide"/>
         <Tooltip Type="string" Editor="hide"/>
         <IncomingConnections RequireAtLeastOne="Yes" Editor="hide">Yes</IncomingConnections>
-        <OutgoingConnections RequireAtLeastOne="Yes" DetailedInfo="" Editor="hide">Unlimited</OutgoingConnections>
+        <OutgoingConnections DetailedInfo="" Editor="hide">No</OutgoingConnections>
         <ConnectionType Editor="hide">Move</ConnectionType>
         <ScriptFunctions Editor="hide">jobArrived</ScriptFunctions>
         <ExecutionMode Editor="hide">Serialized</ExecutionMode>
