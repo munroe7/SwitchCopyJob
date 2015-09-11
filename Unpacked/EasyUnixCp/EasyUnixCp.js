@@ -35,29 +35,26 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 
 function jobArrived( s : Switch, job : Job )
 {
-	//this is the path to the BCC Watch Folder.
+	// Capture some variables
 	var destinationPath = s.getPropertyValue( 'DestinationPath' );
 	var debug = s.getPropertyValue( 'Debug' );
 	
-	//this is the path of the input file
-	var inputPath = job.getPath();
-
+	var logLevel = 2;
 	
-	//command to copy files from source to destination
-	var moveFileCommand = 'cp ' + "\"" + inputPath + "\"" + " \"" + destinationPath+'/'+job.getName()+ "\"";
+	// Build copy command
+	var moveFileCommand = 'cp ' + '"' + job.getPath() + '"' +  ' "' + destinationPath + '/' +job.getName() + '"';
 	
-	
-	//debug variables
+	// Debug
 	if(debug == 'Yes'){
-		s.log( 2, 'destinationPath: '+destinationPath );
-		s.log( 2, 'inputPath: '+inputPath );
-		s.log( 2, 'moveFileCommand: '+moveFileCommand );
+		s.log( logLevel, 'destinationPath: ' + destinationPath );
+		s.log( logLevel, 'inputPath: ' + inputPath );
+		s.log( logLevel, 'moveFileCommand: ' + moveFileCommand );
 	}
 
-	//execute move file command
+	// Execute command
 	Process.execute(moveFileCommand);
 	
-	//log any execute errors
+	// Check for errors
 	var cpError = Process.stderr;
 	var cpResponse = Process.stdout;
 	
@@ -65,12 +62,10 @@ function jobArrived( s : Switch, job : Job )
 		s.log( 3, 'cpError: ' + cpError );
 	}
 	
-	
-	//debug variables
+	// Debug some more
 	if( debug == 'Yes' ){
 		s.log( 2, 'cpResponse: ' + cpResponse );
 	}
 
 		
-	
 }
