@@ -2,9 +2,9 @@
     <ScripterInstanceName>Easy UNIX cp</ScripterInstanceName>
     <ScriptPackageFormatVersion>1.0</ScriptPackageFormatVersion>
     <ScripterPassword></ScripterPassword>
-    <ScriptDeclarationFile>MoveToBCCHot.xml</ScriptDeclarationFile>
+    <ScriptDeclarationFile>EasyUnixCp.xml</ScriptDeclarationFile>
     <ScriptProgramFiles>
-        <ScriptProgramFile ScriptLanguage="JavaScript">MoveToBCCHot.js</ScriptProgramFile>
+        <ScriptProgramFile ScriptLanguage="JavaScript">EasyUnixCp.js</ScriptProgramFile>
     </ScriptProgramFiles>
     <ScriptIconFile>copy_icon.png</ScriptIconFile>
     <AppleBinary></AppleBinary>
