@@ -42,7 +42,9 @@ function jobArrived( s : Switch, job : Job )
 	var logLevel = 2;
 	
 	// Build copy command
-	var moveFileCommand = 'cp ' + '"' + job.getPath() + '"' +  ' "' + destinationPath + '/' +job.getName() + '"';
+	var inputPath = job.getPath();
+	var outputPath = destinationPath + '/' +job.getName();
+	var moveFileCommand = 'cp ' + '"' + inputPath + '"' +  ' "' + outputPath + '"';
 	
 	// Debug
 	if(debug == 'Yes'){
@@ -52,7 +54,7 @@ function jobArrived( s : Switch, job : Job )
 	}
 
 	// Execute command
-	Process.execute(moveFileCommand);
+	Process.execute( moveFileCommand );
 	
 	// Check for errors
 	var cpError = Process.stderr;
@@ -66,6 +68,5 @@ function jobArrived( s : Switch, job : Job )
 	if( debug == 'Yes' ){
 		s.log( 2, 'cpResponse: ' + cpResponse );
 	}
-
 		
 }
